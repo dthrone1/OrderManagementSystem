@@ -1,0 +1,9 @@
+C:\Users\Anup Bhandari\Desktop\DR\Projects\OrderManagementSystem\OrderManagementSystem.Core\bin\Debug\OrderManagementSystem.Core.dll.config
+C:\Users\Anup Bhandari\Desktop\DR\Projects\OrderManagementSystem\OrderManagementSystem.Core\bin\Debug\OrderManagementSystem.Core.dll
+C:\Users\Anup Bhandari\Desktop\DR\Projects\OrderManagementSystem\OrderManagementSystem.Core\bin\Debug\OrderManagementSystem.Core.pdb
+C:\Users\Anup Bhandari\Desktop\DR\Projects\OrderManagementSystem\OrderManagementSystem.Core\bin\Debug\EntityFramework.dll
+C:\Users\Anup Bhandari\Desktop\DR\Projects\OrderManagementSystem\OrderManagementSystem.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Anup Bhandari\Desktop\DR\Projects\OrderManagementSystem\OrderManagementSystem.Core\bin\Debug\EntityFramework.xml
+C:\Users\Anup Bhandari\Desktop\DR\Projects\OrderManagementSystem\OrderManagementSystem.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Anup Bhandari\Desktop\DR\Projects\OrderManagementSystem\OrderManagementSystem.Core\obj\Debug\OrderManagementSystem.Core.dll
+C:\Users\Anup Bhandari\Desktop\DR\Projects\OrderManagementSystem\OrderManagementSystem.Core\obj\Debug\OrderManagementSystem.Core.pdb

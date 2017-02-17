@@ -1,0 +1,71 @@
+﻿@model OrderManagementSystem.Models.Paramed
+
+@{
+    ViewBag.Title = "AddaService";
+}
+
+<h2>Adda Service</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.OrderId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustomerName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustomerName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AccountNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AccountNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AccountNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ServiceCount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ServiceCount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ServiceCount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @*<input type="submit" value="Save" class="btn btn-default" onclick="location.href='@Url.Action("SaveService", "ParamedOrder",new {CustomerName =model.CustomerName })'" />*@
+                <a href='@Url.Action("SaveService", "ParamedOrder")' onclick='navigate(this.href);'>
+                    <input type="button" value='Submit' class="btn btn-default" />
+                </a>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script type='text/javascript'>
+    function navigate(target){
+        //Grab your values
+        var CustomerName = document.getElementById('CustomerName').value;
+        var AccountNumber = document.getElementById('AccountNumber').value;
+        var ServiceCount = document.getElementById('ServiceCount').value;
+
+        //Perform your navigation
+        window.location.href = target + '?CustomerName=' + CustomerName + '&AccountNumber=' + AccountNumber + '&ServiceCount=' + ServiceCount;
+    }
+</script>

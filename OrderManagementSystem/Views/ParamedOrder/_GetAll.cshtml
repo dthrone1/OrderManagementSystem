@@ -1,0 +1,45 @@
+﻿@model IEnumerable<OrderManagementSystem.Models.Paramed>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "OrderList";
+}
+
+<h2>OrderList</h2>
+
+<table style="border:2px solid black; ">
+@if (Model != null)
+{
+    
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>Order Id:</td>
+                <td>@item.OrderId</td>
+            </tr>
+            <tr>
+                <td>Account Number:</td>
+                <td>@item.AccountNumber</td>
+            </tr>
+            <tr>
+                <td>Customer Name:</td>
+                <td>@item.CustomerName</td>
+            </tr>
+            <tr>
+                <td>Service Count:</td>
+                <td>@@item.ServiceCount</td>
+            </tr>
+            <tr><td></td><td></td></tr>
+            <tr><td></td><td></td></tr>
+            <tr><td></td><td></td></tr>
+
+    }
+
+
+}
+</table>
+
+
+

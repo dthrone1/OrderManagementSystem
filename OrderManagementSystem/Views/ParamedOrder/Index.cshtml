@@ -1,0 +1,54 @@
+﻿@model IEnumerable<OrderManagementSystem.Models.Paramed>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+@{
+    ViewBag.Title = "ParamedOrder";
+    @Html.AntiForgeryToken()
+
+}
+
+<h2>Paramed Order</h2>
+
+<h3>Available Options for Paramed Orders:</h3>
+
+    @*if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-success">
+            <a class="close" data-dismiss="alert">×</a>
+            <strong>Service add Success!</strong>
+        </div>
+    }*@
+
+@*@Html.DropDownList("OrderType", new List<SelectListItem>
+    {
+        new SelectListItem {Text= "Paramed", Value="1", Selected=true },
+        new SelectListItem {Text= "CreditCard", Value="2" },
+        new SelectListItem {Text= "Payroll", Value="3"}
+    }, new { @class = "btn btn-default dropdown-toggle" } )*@
+
+
+    <div id="divParamedOrders"></div>
+
+    @using (Ajax.BeginForm("GetAll", new AjaxOptions { UpdateTargetId = "divParamedOrders", HttpMethod = "GET", InsertionMode = InsertionMode.Replace }))
+    {
+
+        <input type="submit" value="Get List" class="btn btn-primary" />
+
+    }
+   
+
+<div>
+    </br>
+    <input type="submit" value="Add a Service" class="btn btn-primary" onclick="location.href='@Url.Action("AddaService", "ParamedOrder")'" />
+
+    <input type="submit" value="Cancel Order" class="btn btn-primary" onclick="location.href='@Url.Action("CancelOrder", "ParamedOrder")'"/>
+
+    <input type="submit" value="Send To Billing" class="btn btn-primary" onclick="location.href='@Url.Action("SendToBilling", "ParamedOrder")'"/>
+</div>
+
+
+
+
